@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Here goes the metadata -->
+  <meta charset="utf-8">
+  <title>HTML5 basics</title>
+
+</head>
+
+<body>
+  <!-- Here goes the visible content of the page -->
+  <h1>Form example</h1>
+
+  <form method="post" action="http://test.mateine.org/sweng/echo.php">
+    <p>
+      <input type="text" name="itext" placeholder="Insert some text">
+    </p>
+    <p>
+      <input type="email" name="iemail" placeholder="Insert email">
+    </p>
+    <p>
+      <input type="tel" name="itel" placeholder="Insert phone">
+    </p>
+    <p>
+      <input type="search" name="ikeyword" placeholder="Insert your keyword">
+    </p>
+    <p>
+      <input type="datetime-local" name="idate" value="2013-10-09T15:38:00">
+    </p>
+
+    <p>
+      <input type="url" name="iurl" title="Insert url">
+    </p>
+    <h2>Other input types</h2>
+    <p>
+      <input type="radio" name="sex" value="male">Male
+      <input type="radio" name="sex" value="female">Female
+
+      <input type="radio" name="altro" value="altro">Altro
+    </p>
+    <p>
+      <input type="checkbox" name="drink" value="beer">Beer
+      <input type="checkbox" name="drink" value="wine">Wine
+      <input type="checkbox" name="drink" value="soda">Soda
+    </p>
+    <p>Best car:
+      <select name="icar">
+        <option value="volvo">Fiat</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+        <option value="audi">Ferrari</option>
+      </select>
+    </p>
+    <input type="submit" value="Send">
+    <input type="reset" value="Clear form">
+
+  </form>
+
+  <script src="jquery-2.1.0.min.js"></script>
+</body>
+</html>
