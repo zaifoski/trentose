@@ -27,12 +27,12 @@ $(document).ready(function () {
 
 
   $(".items").on("click", "li", function (event) {
-    var selected = this;
-    $(this).css("background-color", "#82dbf8");
-    $(".btn-remove").on("click", function (event) {
-      $(selected).remove();
-      selected = "";
-    });
+    //var selected = this;    
+    $(this).addClass("selected");
+  });
+  
+  $(".btn-remove").click(function(){
+    $(".selected").remove();
   });
 
 

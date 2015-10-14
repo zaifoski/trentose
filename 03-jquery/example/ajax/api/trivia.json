@@ -1,0 +1,13 @@
+[{"image" : "img/image1.jpg", 
+  "desc" : "Cool view of pizza duomo",
+  "title" : "Piazza duomo"
+ }, 
+ {"image" : "img/image2.jpg", 
+  "desc" : "Cool view of pizza fiera",
+  "title" : "Piazza fiera"
+ },  
+{ "image" : "img/image3.jpg", 
+  "desc" : "Cool view of pizza duomo",
+  "title" : "Piazza duomo"
+ }
+]
