@@ -2,13 +2,17 @@
 
 $(document).ready(function () {
   
-    $.get("api/msg.html", function(tmpl){
+  /*
+    $.get("api/trivia.html", function(tmpl){
       $(".trivia").html(tmpl);
+    }).fail(function(){
+      alert("Error loading");
     });
   
+  */
+  /*
     $.getJSON("api/trivia.json", function(json){
-      $(".trivia").html(json[0].title);
-      console.log( "success" );
+      displayTrivia(json);
     })
     .done(function() {
       console.log( "second success" );
@@ -20,13 +24,35 @@ $(document).ready(function () {
       console.log( "complete" );
     });
   
-    
-    $.get("http://randomword.setgetgo.com/get.php", function(tmpl){
-      $(".trivia").html(tmpl);
-    });    
+  */
+  
+  /*
+
+    $.getJSON("http://randomword.setgetgo.com/get.php?callback=?", function(data){
+      $(".trivia").html(data.Word);
+    }).fail(function(){
+      alert("Fail!!");
+    });  
+  */
+  
+   var url = "http://randomword.setgetgo.com/get.php";
+    $.ajax({
+        type: "GET",
+        url: url,
+        dataType: "jsonp",
+        jsonpCallback: 'processWord'
+    });
+  
+  
   
 });
 
 var displayTrivia = function(json){
-  
+  $.each(json, function(i, item){
+    $(".trivia").append(item.title);
+  });        
 }
+var processWord = function(data){
+  alert(data.Word);
+}
+
